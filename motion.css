@@ -1,0 +1,107 @@
+/* Motion layer for Median Games. Everything animated is gated by html.motion,
+   which index.html sets only when the visitor has NOT asked for reduced motion. */
+html{overflow-x:clip}
+@media(min-width:701px){
+  html{scroll-padding-top:96px}
+  .site-header{position:sticky;top:0;z-index:10}
+  .site-header:before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;translate:-50% 0;background:#fffaf0d9;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);opacity:0;z-index:-1}
+  .site-header.scrolled{height:72px}
+  .site-header.scrolled:before{opacity:1}
+  .motion .site-header{transition:height .35s cubic-bezier(.2,.8,.2,1)}
+  .motion .site-header:before{transition:opacity .35s}
+}
+.scroll-progress{position:fixed;top:0;inset-inline:0;height:3px;z-index:30;background:linear-gradient(90deg,var(--coral),#ffc957,#43cbbb);transform-origin:0 50%;scale:var(--p,0) 1;pointer-events:none}
+html[dir=rtl] .scroll-progress{transform-origin:100% 50%}
+.spark{position:fixed;width:9px;height:9px;border-radius:30%;pointer-events:none;z-index:40}
+
+/* Keyframes */
+@keyframes rise{from{opacity:0;translate:0 26px}}
+@keyframes drop{from{opacity:0;translate:0 -16px}}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;scale:.86;translate:0 34px;filter:blur(8px)}}
+@keyframes float{50%{translate:0 -12px}}
+@keyframes pulse{50%{scale:1.1}}
+@keyframes wobble{50%{rotate:-3deg}}
+@keyframes spin{to{rotate:360deg}}
+@keyframes twinkle{50%{scale:.7;rotate:25deg;opacity:.7}}
+@keyframes draw{from{scale:0 1}}
+@keyframes bob{50%{translate:0 -7px}}
+@keyframes drift{to{translate:36px 0}}
+@keyframes jig{40%{translate:0 -5px;rotate:14deg}}
+
+/* Page load */
+.motion .site-header{animation:drop .7s cubic-bezier(.2,.8,.2,1) backwards}
+.motion .hero-copy>*{animation:rise .85s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*95ms + 150ms)}
+.motion .hero-copy>:nth-child(2){--i:1}.motion .hero-copy>:nth-child(3){--i:2}.motion .hero-copy>:nth-child(4){--i:3}.motion .hero-copy>:nth-child(5){--i:4}
+.motion .hero-visual>img{animation:pop 1.1s cubic-bezier(.2,.9,.25,1.1) .1s backwards,float 7s ease-in-out 1.3s infinite}
+.motion .hero-sun{animation:fade .9s .5s backwards,pulse 5s ease-in-out 1.4s infinite;box-shadow:0 0 0 18px #ffe08033,0 0 0 40px #ffe08018}
+.motion .floating-label{animation:fade .8s 1s backwards,wobble 5s ease-in-out 1.8s infinite}
+.motion .confetti-one{animation:fade .8s 1.1s backwards,spin 12s linear 1.9s infinite}
+.motion .confetti-two{animation:fade .8s 1.2s backwards,pulse 3.2s ease-in-out 2s infinite}
+.motion .accent-word:after{animation:draw .8s cubic-bezier(.2,.8,.2,1) .95s backwards}
+html[dir=rtl] .accent-word:after{transform-origin:100% 50%}
+html[dir=ltr] .accent-word:after{transform-origin:0 50%}
+.motion .little-star,.motion .footer-brand>span,.motion .doodle-spark{animation:twinkle 2.8s ease-in-out infinite}
+
+/* Hero parallax layers (driven by --px/--py from motion.js) */
+.motion .hero-sun,.motion .floating-label,.motion .confetti{transition:translate .6s cubic-bezier(.2,.8,.2,1)}
+.motion .hero-sun{translate:calc(var(--px,0)*-38px) calc(var(--py,0)*-28px)}
+.motion .floating-label{translate:calc(var(--px,0)*26px) calc(var(--py,0)*20px)}
+.motion .confetti-one{translate:calc(var(--px,0)*-18px) calc(var(--py,0)*-30px)}
+.motion .confetti-two{translate:calc(var(--px,0)*30px) calc(var(--py,0)*16px)}
+
+/* Buttons and nav */
+.button,.game-link{position:relative}
+.motion .button,.motion .game-link{transition:transform .25s,box-shadow .25s,scale .15s,background-color .2s,filter .2s}
+.motion .button:active,.motion .game-link:active{scale:.95}
+.primary{overflow:hidden;isolation:isolate}
+.primary:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,#ffffff55 50%,transparent 70%);translate:-130% 0}
+.motion .primary:hover:before{translate:130% 0;transition:translate .75s}
+.arrow{transition:translate .25s cubic-bezier(.2,.8,.2,1)}
+.button:hover .arrow,.game-link:hover .arrow{translate:-6px 0}
+html[dir=ltr] .button:hover .arrow,html[dir=ltr] .game-link:hover .arrow{translate:6px 0}
+.main-nav a{position:relative;padding-block:4px}
+.main-nav a:after{content:'';position:absolute;inset-inline:0;bottom:-2px;height:3px;border-radius:3px;background:var(--coral);scale:0 1;transition:scale .3s cubic-bezier(.2,.8,.2,1)}
+html[dir=rtl] .main-nav a:after{transform-origin:100% 50%}
+html[dir=ltr] .main-nav a:after{transform-origin:0 50%}
+.main-nav a:hover:after,.main-nav a[aria-current=true]:after{scale:1 1}
+.brand:hover .brand-mark i{animation:jig .55s ease}
+.brand:hover .brand-mark i:nth-child(2){animation-delay:.07s}.brand:hover .brand-mark i:nth-child(3){animation-delay:.14s}.brand:hover .brand-mark i:nth-child(4){animation-delay:.21s}
+
+/* Scroll reveal */
+.motion .reveal{opacity:0;translate:0 30px;transition:opacity .75s ease,translate .85s cubic-bezier(.2,.8,.2,1)}
+.motion .reveal.in{opacity:1;translate:none}
+.motion .section-heading .heading-line{scale:0 1;transition:scale .9s cubic-bezier(.2,.8,.2,1) .15s}
+.motion .section-heading.in .heading-line{scale:1 1}
+.motion .stagger .game-card{opacity:0;translate:0 40px;transition:opacity .7s ease calc(var(--k,0)*130ms),translate .85s cubic-bezier(.2,.8,.2,1) calc(var(--k,0)*130ms),transform .35s ease,box-shadow .35s ease}
+.motion .stagger .game-card:nth-child(2){--k:1}.motion .stagger .game-card:nth-child(3){--k:2}
+.motion .stagger.in .game-card{opacity:1;translate:none}
+
+/* Game cards: tilt + glow (desktop pointers only) */
+.game-card{position:relative}
+.game-card:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),#ffe7a866,transparent 60%)}
+.game-card:hover:after{opacity:1}
+.game-art{transition:filter .4s}
+.game-card:hover .game-art{filter:saturate(1.15) brightness(1.03)}
+@media(hover:hover) and (pointer:fine){
+  .motion .game-card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+  .motion .game-card:hover{transform:perspective(900px) translateY(-8px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));box-shadow:0 22px 44px #3e302b14}
+}
+
+/* About + footer idle motion */
+.motion .controller{animation:wobble 4.5s ease-in-out infinite;transition:scale .3s cubic-bezier(.3,1.6,.5,1)}
+.about-doodle:hover .controller{scale:1.1}
+.motion .controller-buttons i{animation:pulse 2s ease-in-out infinite}.motion .controller-buttons i:last-child{animation-delay:.6s}
+.motion .doodle-dot{animation:bob 3s ease-in-out infinite}
+.motion .about-tag{animation:wobble 6s ease-in-out infinite}
+.motion .footer-landscape{animation:drift 16s ease-in-out infinite alternate}
+
+/* Dialog open/close */
+.motion dialog{opacity:0;translate:0 26px;scale:.95;transition:opacity .3s,translate .45s cubic-bezier(.2,.9,.25,1.1),scale .45s cubic-bezier(.2,.9,.25,1.1),overlay .45s allow-discrete,display .45s allow-discrete}
+.motion dialog[open]{opacity:1;translate:none;scale:1}
+.motion dialog::backdrop{opacity:0;transition:opacity .3s,overlay .3s allow-discrete,display .3s allow-discrete}
+.motion dialog[open]::backdrop{opacity:1}
+@starting-style{.motion dialog[open]{opacity:0;translate:0 26px;scale:.95}.motion dialog[open]::backdrop{opacity:0}}
+
+/* Language switch crossfade (View Transitions API) */
+::view-transition-group(root){animation-duration:.5s}
