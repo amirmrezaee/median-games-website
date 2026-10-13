@@ -1,0 +1,11 @@
+import { mkdir, copyFile, cp, rm } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const output = path.resolve(root, 'dist');
+if (output !== path.join(root, 'dist')) throw new Error('Invalid output path');
+await rm(output, { recursive: true, force: true });
+await mkdir(output, { recursive: true });
+for (const name of ['index.html', 'styles.css', 'games.js', 'app.js', '.nojekyll']) await copyFile(path.join(root, name), path.join(output, name));
+await cp(path.join(root, 'assets'), path.join(output, 'assets'), { recursive: true });
+console.log('Website ready in dist/');

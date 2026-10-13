@@ -1,0 +1,73 @@
+{
+  "testedAt": "2026-10-13T18:34:56.365Z",
+  "source": {
+    "index.html": "024bc0d206627a18077b10cef1037a6265eee6eb665090290f3ad755f190020e",
+    "styles.css": "515aeae5c6211d752035c905444c7e0f03a28689385ad0fab078c7faad305cfe",
+    "app.js": "7ce36f13a3e47e3e8f3576b4bee35945eaa58cdcb8327036c1cbdf238356b93e",
+    "games.js": "12d62ba11b10ae0a27cc0cf13c709cd5019750a84ae90f7ba58728ecba497df9",
+    "assets/hero.png": "6f17864a8f77734019262c17ed66f723e68d59d62e2050e4d2a9a72efbfa42b8",
+    "assets/puzzle.png": "280f36680dd7ac01854759b9ad3053f5add165d437c5ac37d3c5d83158e5e76c",
+    "assets/racing.png": "fb496d32b611363456fe3d3520705e9e298145c4432cea7a33f6c50faf76154f"
+  },
+  "checks": [
+    "Local assets loaded",
+    "No browser errors",
+    "Persian RTL",
+    "English LTR",
+    "Language persists after reload",
+    "Game dialog opens and closes with Escape",
+    "No horizontal overflow at five widths in both languages"
+  ],
+  "layouts": [
+    {
+      "lang": "fa",
+      "viewport": 320,
+      "content": 320
+    },
+    {
+      "lang": "fa",
+      "viewport": 390,
+      "content": 390
+    },
+    {
+      "lang": "fa",
+      "viewport": 768,
+      "content": 768
+    },
+    {
+      "lang": "fa",
+      "viewport": 1024,
+      "content": 1024
+    },
+    {
+      "lang": "fa",
+      "viewport": 1440,
+      "content": 1440
+    },
+    {
+      "lang": "en",
+      "viewport": 320,
+      "content": 320
+    },
+    {
+      "lang": "en",
+      "viewport": 390,
+      "content": 390
+    },
+    {
+      "lang": "en",
+      "viewport": 768,
+      "content": 768
+    },
+    {
+      "lang": "en",
+      "viewport": 1024,
+      "content": 1024
+    },
+    {
+      "lang": "en",
+      "viewport": 1440,
+      "content": 1440
+    }
+  ]
+}
