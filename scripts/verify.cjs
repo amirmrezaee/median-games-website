@@ -45,7 +45,7 @@ const { createHash } = require('node:crypto');
     }
   }
   assert.deepEqual(errors, []);
-  const source = Object.fromEntries(['index.html', 'styles.css', 'app.js', 'games.js', 'assets/hero.png', 'assets/puzzle.png', 'assets/racing.png'].map(name => [name, createHash('sha256').update(fs.readFileSync(path.join(root, name))).digest('hex')]));
+  const source = Object.fromEntries(['index.html', 'styles.css', 'app.js', 'games.js', 'assets/hero.webp', 'assets/puzzle.webp', 'assets/racing.webp'].map(name => [name, createHash('sha256').update(fs.readFileSync(path.join(root, name))).digest('hex')]));
   const result = { testedAt: new Date().toISOString(), siteUrl: baseUrl, source, checks: ['Local assets loaded', 'No browser errors', 'Persian RTL', 'English LTR', 'Language persists after reload', 'Game dialog opens and closes with Escape', 'No horizontal overflow at five widths in both languages'], layouts };
   fs.writeFileSync(path.join(evidence, 'verification.json'), JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result, null, 2));

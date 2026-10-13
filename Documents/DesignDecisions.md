@@ -28,3 +28,4 @@ Date: 2026-10-13
 - Website URL: https://amirmrezaee.github.io/median-games-website/
 - Repository URL: https://github.com/amirmrezaee/median-games-website
 - The public deployment contains only the website files and assets; project documentation and screenshots are excluded by the build script.
+- After the first live browser check passed, artwork was compressed to WebP to reduce transfer size by about 92% while retaining the approved composition. Original generated PNGs are preserved outside the public output and in Git history.
