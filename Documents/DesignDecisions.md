@@ -29,3 +29,9 @@ Date: 2026-10-13
 - Repository URL: https://github.com/amirmrezaee/median-games-website
 - The public deployment contains only the website files and assets; project documentation and screenshots are excluded by the build script.
 - After the first live browser check passed, artwork was compressed to WebP to reduce transfer size by about 92% while retaining the approved composition. Original generated PNGs are preserved outside the public output and in Git history.
+
+## Motion upgrade — 2026-10-13
+- User supplied `median-motion-upgrade.patch` and explicitly requested applying and publishing it.
+- Applied the patch once on the local `main`; it was not already present in this checkout.
+- Motion layer adds staged entrance, hero parallax, scroll reveal, desktop card tilt, confetti, sticky navigation and dialog/language transitions.
+- Visitors requesting reduced motion retain visible content without the motion layer. Persian/English and the approved bright visual direction remain in place.
