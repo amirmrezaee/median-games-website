@@ -6,13 +6,15 @@ const dialog = document.querySelector('#game-dialog');
 let selectedGame = null;
 let language = 'fa';
 const localized = value => typeof value === 'string' ? value : value?.[language] || value?.en || '';
+const catalogAsset = value => value?.startsWith(window.MEDIAN_STUDIO.company.websiteUrl) ? value.slice(window.MEDIAN_STUDIO.company.websiteUrl.length) : value;
 function makeElement(tag, className, text) { const element = document.createElement(tag); if (className) element.className = className; if (text) element.textContent = text; return element; }
 function renderGames() {
   const grid = document.querySelector('#game-grid'); grid.replaceChildren();
-  for (const game of window.MEDIAN_GAMES) {
+  const games = window.MEDIAN_SELECT_GAMES(window.MEDIAN_STUDIO, 'website');
+  for (const game of games) {
     const card = makeElement('article', 'game-card');
     card.dataset.game = game.id;
-    const image = makeElement('img', 'game-art'); image.src = game.image; image.alt = localized(game.title); image.loading = 'lazy'; image.width = 600; image.height = 400;
+    const image = makeElement('img', 'game-art'); image.src = catalogAsset(game.image); image.alt = localized(game.title); image.loading = 'lazy'; image.width = 600; image.height = 400;
     if (game.imageFit === 'contain') { image.classList.add('game-icon'); card.classList.add('released-game'); }
     const info = makeElement('div', 'game-info');
     info.append(makeElement('h3', 'game-title', localized(game.title)), makeElement('span', 'status', localized(game.status)), makeElement('p', 'game-summary', localized(game.summary)));
@@ -25,7 +27,7 @@ function renderGames() {
   }
 }
 function fillDialog(game) {
-  document.querySelector('#dialog-image').src = game.image;
+  document.querySelector('#dialog-image').src = catalogAsset(game.image);
   document.querySelector('#dialog-image').alt = localized(game.title);
   document.querySelector('#dialog-title').textContent = localized(game.title);
   document.querySelector('#dialog-status').textContent = localized(game.status);
@@ -35,7 +37,7 @@ function fillDialog(game) {
   for (const feature of localized(game.features) || []) features.append(makeElement('li', '', feature));
   features.hidden = !features.children.length;
   const gallery = document.querySelector('#dialog-gallery'); gallery.replaceChildren();
-  for (const [index, source] of (game.screenshots || []).entries()) { const image = makeElement('img'); image.src = source; image.alt = `${localized(game.title)} — ${language === 'fa' ? 'تصویر بازی' : 'Game screenshot'} ${index + 1}`; image.width = 530; image.height = 949; image.loading = 'lazy'; gallery.append(image); }
+  for (const [index, source] of (game.screenshots || []).entries()) { const image = makeElement('img'); image.src = catalogAsset(source); image.alt = `${localized(game.title)} — ${language === 'fa' ? 'تصویر بازی' : 'Game screenshot'} ${index + 1}`; image.width = 530; image.height = 949; image.loading = 'lazy'; gallery.append(image); }
   gallery.hidden = !gallery.children.length;
   document.querySelector('.dialog-note').hidden = game.links.length > 0;
   const links = document.querySelector('#dialog-links'); links.replaceChildren();
@@ -54,6 +56,7 @@ function setLanguage(next) {
   document.querySelectorAll('[data-alt]').forEach(element => element.alt = copy[language][element.dataset.alt]);
   document.querySelectorAll('[data-language]').forEach(element => element.setAttribute('aria-pressed', String(element.dataset.language === language)));
   renderGames(); if (selectedGame) fillDialog(selectedGame);
+  renderCompany();
   try { localStorage.setItem('median-language', language); } catch {}
   const url = new URL(location.href); url.searchParams.set('lang', language); history.replaceState(null, '', url);
 }
@@ -62,6 +65,18 @@ let savedLanguage; try { savedLanguage = localStorage.getItem('median-language')
 const requestedLanguage = new URLSearchParams(location.search).get('lang');
 setLanguage(requestedLanguage === 'en' || requestedLanguage === 'fa' ? requestedLanguage : savedLanguage || 'fa');
 const requestedGame = new URLSearchParams(location.search).get('game');
-const matchingGame = window.MEDIAN_GAMES.find(game => game.id === requestedGame);
+const matchingGame = window.MEDIAN_SELECT_GAMES(window.MEDIAN_STUDIO, 'website').find(game => game.id === requestedGame);
 if (matchingGame) openGame(matchingGame);
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+function renderCompany() {
+  const company = window.MEDIAN_STUDIO.company;
+  const logo = document.querySelector('#studio-logo');
+  logo.src = catalogAsset(company.logoUrl); logo.alt = localized(company.name);
+  const links = document.querySelector('#studio-social-links'); links.replaceChildren();
+  for (const link of company.socialLinks.filter(l => l.enabled && l.website)) {
+    const anchor = makeElement('a', 'game-link', localized(link.label));
+    anchor.href = link.url; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; links.append(anchor);
+  }
+  links.hidden = !links.children.length;
+}

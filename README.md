@@ -8,6 +8,8 @@ From this directory run `python -m http.server 4173`, then open `http://localhos
 
 ## Game content
 
+Current source of truth: `data/studio.v1.json`. Run `node scripts/build.mjs` after editing; `games.js` is now generated. See [shared catalogue contract](Documents/StudioCatalog.md) for Unity, bundle IDs, promotion, branding and future link-hub usage. Validate with `node scripts/verify-catalog.mjs`. The older editing instructions below describe the original format.
+
 Edit `games.js` to manage games. Fenjoon is the first released game; the other two entries are illustrative concepts. Each entry supports a localized title, summary, description, status, image, features, screenshots and links. Add real links as `{ label: { fa: 'دانلود', en: 'Download' }, url: 'https://your-real-store-url' }`. Empty link arrays show the preview notice. Update the localized `previewNotice` in `app.js` as more actual games replace the placeholders.
 
 Fenjoon can be shared directly at https://amirmrezaee.github.io/median-games-website/?lang=fa&game=fenjoon. Its official icon, screenshots and verified listing metadata are documented in `Documents/FenjoonSources.json`.

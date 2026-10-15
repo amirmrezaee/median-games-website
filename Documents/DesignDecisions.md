@@ -1,5 +1,12 @@
 # Website design decisions
 
+## Shared catalogue — 2026-10-15
+- User selected this repository as the common source for website games, in-app About/cross-promotion and a future social link hub.
+- Canonical versioned JSON and public brand assets are published by the existing GitHub Pages workflow. Generated games.js preserves the current website rendering path.
+- Current-game identification uses exact bundle IDs. First release and latest update remain separate. Concepts never become in-app released-game recommendations.
+- Unity data/service belongs in the independent SharedPackages studio-catalogue package; UI System owns the eventual common presentation. No existing game is migrated by this delivery.
+- Only confirmed social links and dates may be populated. Original supplied Arts are preserved; production logo and identity-board copies are published without modification. See StudioCatalog.md.
+
 Date: 2026-10-13
 
 ## Approved scope
