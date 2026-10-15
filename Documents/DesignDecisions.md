@@ -35,3 +35,12 @@ Date: 2026-10-13
 - Applied the patch once on the local `main`; it was not already present in this checkout.
 - Motion layer adds staged entrance, hero parallax, scroll reveal, desktop card tilt, confetti, sticky navigation and dialog/language transitions.
 - Visitors requesting reduced motion retain visible content without the motion layer. Persian/English and the approved bright visual direction remain in place.
+
+## Fenjoon release — 2026-10-15
+- User identified Fenjoon (فنجون), package `com.mediangames.fenjoon`, as the studio's new game and requested adding it to the site, followed by an Instagram introduction post.
+- Replaced the first illustrative game entry with Fenjoon; remaining illustrative entries retain explicit concept labels.
+- Verified the official Bazaar listing on 2026-10-15: Persian word and trivia puzzles, selecting letters to answer clues, discovering connections between each round's answers, meaning/letter hints and saved progress.
+- Used the actual icon and two screenshots from the official listing, without substituting invented gameplay art. URLs and source metadata are recorded in `FenjoonSources.json`.
+- Added direct Bazaar links to the game card and detail dialog, bilingual descriptions, feature list, screenshot gallery and shareable `?lang=fa&game=fenjoon` link.
+- English copy explicitly identifies the game as Persian-language; no English gameplay availability is implied.
+- Instagram work is creation of artwork and caption, not publication to an Instagram account.

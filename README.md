@@ -8,9 +8,11 @@ From this directory run `python -m http.server 4173`, then open `http://localhos
 
 ## Game content
 
-Edit `games.js` to replace the three illustrative entries. Each entry supports a localized title, summary, description, status, image and links. Add real links as `{ label: { fa: 'دانلود', en: 'Download' }, url: 'https://your-real-store-url' }`. Empty link arrays show the preview notice. Remove or update the localized `previewNotice` in `app.js` once actual games replace the placeholders.
+Edit `games.js` to manage games. Fenjoon is the first released game; the other two entries are illustrative concepts. Each entry supports a localized title, summary, description, status, image, features, screenshots and links. Add real links as `{ label: { fa: 'دانلود', en: 'Download' }, url: 'https://your-real-store-url' }`. Empty link arrays show the preview notice. Update the localized `previewNotice` in `app.js` as more actual games replace the placeholders.
 
-Images and fonts are local, so visitors do not depend on external asset hosts. Generated artwork is illustrative, not footage from actual games.
+Fenjoon can be shared directly at https://amirmrezaee.github.io/median-games-website/?lang=fa&game=fenjoon. Its official icon, screenshots and verified listing metadata are documented in `Documents/FenjoonSources.json`.
+
+Images and fonts are local, so visitors do not depend on external asset hosts. Fenjoon uses official listing assets. The studio hero and concept cards use generated illustrative artwork.
 
 ## GitHub Pages
 

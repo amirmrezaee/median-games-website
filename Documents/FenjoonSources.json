@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-15",
+  "page": "https://cafebazaar.ir/app/com.mediangames.fenjoon",
+  "assets": {
+    "icon.png": "https://s.cafebazaar.ir/images/icons/com.mediangames.fenjoon-379534aa-1304-4932-bd20-585f7b9ec3d0_512x512.png",
+    "screenshot-1.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.mediangames.fenjoon-904438262589.jpg",
+    "screenshot-2.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.mediangames.fenjoon-872410340633.jpg"
+  },
+  "listing": [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "operatingSystem": "ANDROID",
+      "url": "https://cafebazaar.ir/app/com.mediangames.fenjoon",
+      "image": "https://s.cafebazaar.ir/images/icons/com.mediangames.fenjoon-379534aa-1304-4932-bd20-585f7b9ec3d0_128x128.png",
+      "name": "فنجون",
+      "description": "بازی واژه و کشف ارتباط میان کلمات برای دوستداران جدول و معما",
+      "softwareVersion": "0.1.0",
+      "fileSize": 40886,
+      "installUrl": "bazaar://details?id=com.mediangames.fenjoon",
+      "screenshot": "https://s.cafebazaar.ir/1/https://s.cafebazaar.ir/images/upload/screenshot/com.mediangames.fenjoon-904438262589.jpg",
+      "dateModified": "2026-10-14T12:30:00.000Z",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "ratingCount": 10,
+        "worstRating": 0,
+        "bestRating": 5
+      },
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "IRR"
+      },
+      "softwareRequirements": "",
+      "potentialAction": {
+        "@type": "ViewAction",
+        "name": "Install from Bazaar",
+        "target": [
+          "https://cafebazaar.ir/app/com.mediangames.fenjoon",
+          "android-app://com.farsitel.bazaar/bazaar/details?id=com.mediangames.fenjoon"
+        ]
+      }
+    }
+  ]
+}

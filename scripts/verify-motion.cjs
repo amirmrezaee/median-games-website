@@ -22,6 +22,7 @@ const { execFileSync } = require('node:child_process');
     async function revealAll() {
       const height = await page.evaluate(() => document.documentElement.scrollHeight);
       for (let y = 0; y < height; y += 350) { await page.evaluate(y => window.scrollTo({ top: y, behavior: 'instant' }), y); await page.waitForTimeout(100); }
+      await page.locator('.about-copy').scrollIntoViewIfNeeded();
       await page.waitForTimeout(1200);
       assert.ok(await page.locator('#game-grid').evaluate(el => el.classList.contains('in')));
       assert.ok(await page.locator('.about-copy').evaluate(el => parseFloat(getComputedStyle(el).opacity) > .95));
@@ -38,14 +39,29 @@ const { execFileSync } = require('node:child_process');
         assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
         if (width !== 320) await page.screenshot({ path: path.join(evidence, `${width === 1440 ? 'desktop' : 'mobile'}-${lang}.png`), fullPage: true });
       }
-      await page.locator('.game-link').first().click();
+      const storeUrl = 'https://cafebazaar.ir/app/com.mediangames.fenjoon';
+      assert.equal(await page.locator('[data-game=fenjoon] .store-link').getAttribute('href'), storeUrl);
+      await page.locator('[data-game=fenjoon] button.game-link').click();
       await page.waitForFunction(() => document.querySelector('dialog').open);
+      assert.equal(await page.locator('#dialog-title').textContent(), lang === 'fa' ? 'فنجون' : 'Fenjoon');
+      assert.equal(await page.locator('#dialog-links a').getAttribute('href'), storeUrl);
+      assert.equal(await page.locator('#dialog-gallery img').count(), 2);
+      assert.ok(await page.locator('.dialog-note').evaluate(el => el.hidden));
+      await page.locator('#dialog-gallery').scrollIntoViewIfNeeded();
+      await page.waitForFunction(() => [...document.querySelectorAll('#dialog-gallery img')].every(img => img.complete && img.naturalWidth > 0));
+      await page.locator('dialog').evaluate(el => el.scrollTop = 0);
+      await page.waitForTimeout(600);
+      await page.screenshot({ path: path.join(evidence, `fenjoon-details-${lang}.png`) });
       await page.keyboard.press('Escape');
       await page.waitForFunction(() => !document.querySelector('dialog').open);
     }
     await page.locator('.hero .primary').click();
     await page.waitForTimeout(1500);
     assert.equal(await page.locator('.spark').count(), 0);
+    await page.goto(`${url}?lang=fa&game=fenjoon`, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => document.querySelector('dialog').open);
+    assert.equal(await page.locator('#dialog-title').textContent(), 'فنجون');
+    await page.keyboard.press('Escape');
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.reload({ waitUntil: 'domcontentloaded' });
     assert.ok(await page.locator('html').evaluate(el => !el.classList.contains('motion')));
