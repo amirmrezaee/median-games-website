@@ -1,0 +1,23 @@
+Use case: logo-brand.
+Asset type: one decisive final creative-direction presentation image for MEDIAN GAMES, a real independent studio making cozy, casual, puzzle AND action games. Bilingual Persian and English required.
+Primary request: Synthesize the supplied studio-owned explorations into ONE exceptional, memorable, confident studio identity. Mature playfulness, artistic prestige, warmth and creative intelligence. A beautiful mark that is neither sterile corporate nor cartoonish.
+
+REFERENCE INPUT ROLES — creative references only, none is an exact edit target:
+Reference 1 (Neon Interlocking M): take the strong portal-M silhouette, ribbon construction and warm/cool dialogue; simplify its central junction radically; remove the rainbow, neon tubes and oversized extrusion.
+Reference 2 (64bad... identity): take restraint, negative-space doorway and mature bilingual balance. Do not copy floating diamond, historical claims or fake guideline text.
+Reference 3 (2a976... identity): take elegant soft/firm tension, purple/amber warmth, confident proportions. Remove detached AI-style sparkle and cinematic scenery.
+Reference 4 (prior typography-led proposal): take the ambition of matching distinctive Persian/Latin letterform character, but make the final lettering much clearer and quieter.
+
+DESIGN DECISION — "FOLDED WORLDS":
+A single compact, original, sculptural M symbol made from a continuous broad folded band, two stable upright legs and gently rounded outer shoulders with precise diagonal inner folds. Near-frontal view, very shallow dimensionality, no isometric receding side. The negative space opens clearly from the bottom as one inviting doorway; one concise lozenge-shaped aperture is integrated INTO the central fold as the identifying detail, not a separate diamond floating above. The center is elegantly resolved with only two or three large planes; no tiny triangulated shards, no dense knot. Broad balanced silhouette, width modestly greater than height, equal visual weight on both sides. Firm confident geometry blended with warm sculptural shoulders. It should feel like a piece of contemporary graphic design, not a castle, not an electronics badge. Design as a flat-first mark whose shallow rendering is optional. A clear M is the first read and an invitation into worlds the second.
+Palette: deep aubergine violet and warm amber/apricot, with a single restrained intermediate orange transition at the fold. TWO color families, no cyan blue neon rainbow, no chrome. Ink navy/charcoal and warm chalk neutral. Main mark is rich smooth satin, almost flat, gentle tonal change only to explain the fold. Avoid expensive-looking gold-metal luxury clichés.
+
+PRESENTATION COMPOSITION:
+High resolution LANDSCAPE single image, approx 3:2 aspect ratio, exquisite editorial spacing.
+The left roughly two thirds is an uninterrupted warm ivory field with the primary logo hero. Large symbol, beautifully placed with generous whitespace. Under it exact English "MEDIAN GAMES" in clean strong bespoke contemporary geometric capitals with subtly softened squared corners, impeccable kerning, no sci-fi cuts. Under that exact Persian "مدین گیمز" in confident contemporary Persian lettering, correct connected RTL, dots correct, optically balanced with Latin; not stretched, not calligraphic, not balloon-like. Both languages rendered clearly with equal respect. Carefully controlled vertical spacing, text noticeably smaller than symbol.
+Right roughly one third is an ink-dark vertical panel. Upper part shows a smaller satin version of EXACT SAME symbol with EXACT SAME aperture and geometry; small bilingual lettering beneath, white. Lower part contains two modest flat one-color symbol proofs, dark on light square and white on dark. These are EXACT SAME geometry rendered solid, with the doorway and aperture retained as knockouts, NO changes to silhouette. Include one compact avatar at a realistic small size. Keep panel spare, no diagram clutter.
+Do not place scenic mockups, temples, characters or merch anywhere. No photoreal backgrounds, no grandiose slogans, no fake specifications or measurements. No captions except brand name. The image must let the logo carry the prestige.
+
+Typography accuracy mandatory: M E D I A N space G A M E S; Persian exactly "مدین گیمز".
+Avoid: mascot eyes/faces, smile, gamepad/controller, crowns, shields, wings, lions, laurel, stock esports motif, magical sparkle hovering over M, unrelated decorative icons, AI-star cliché, exaggerated bevel, impossible over-under crossings, detailed illustration, ornate ancient texture, visual gimmicks.
+Output is an original raster visualization of a final proposed concept, not a certified vector master.

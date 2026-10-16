@@ -1,5 +1,11 @@
 # Website design decisions
 
+## Studio logo brief and proposal — 2026-10-16
+- Confirmed user requirements: Persian “مدین گیمز” and English “MEDIAN GAMES”; full creative freedom; a distinctive, memorable studio identity spanning cozy, casual and action games, with warmth and corporate credibility.
+- User requested review and synthesis of the supplied Arts and Desktop/Logos explorations. All 25 images were visually reviewed; embedded descriptions and historical stories were treated as reference content, not confirmed company facts.
+- The proposed “Folded Worlds” direction combines a portal-M, softened folded geometry and violet/amber color, with an integrated central lozenge aperture. This is an unapproved designer recommendation; neither the website theme nor the published identity is changed.
+- The raster presentation, exact prompt, reviewed-source inventory and remaining vector-development work are recorded in `Documents/Brand/2026-10-16/README.md`. Generated monochrome/compact versions remain visual studies until consistent vector geometry and actual-size legibility are checked.
+
 ## Shared catalogue — 2026-10-15
 - User selected this repository as the common source for website games, in-app About/cross-promotion and a future social link hub.
 - Canonical versioned JSON and public brand assets are published by the existing GitHub Pages workflow. Generated games.js preserves the current website rendering path.
