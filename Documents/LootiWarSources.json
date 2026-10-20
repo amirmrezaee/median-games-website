@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-20",
+  "page": "https://cafebazaar.ir/app/com.MedianGames.LootiWar",
+  "assets": {
+    "icon.png": "https://s.cafebazaar.ir/images/icons/com.MedianGames.LootiWar_512x512.png",
+    "screenshot-1.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.MedianGames.LootiWar-578050910625.jpg",
+    "screenshot-2.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.MedianGames.LootiWar-787331217987.jpg"
+  },
+  "listing": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "operatingSystem": "ANDROID",
+    "url": "https://cafebazaar.ir/app/com.MedianGames.LootiWar",
+    "image": "https://s.cafebazaar.ir/images/icons/com.MedianGames.LootiWar_128x128.png",
+    "name": "لوتی وار",
+    "description": "مبارزه و هیجان در یه فیلم فارسی در نقش هنرپیشه اکشن ولی لوتی",
+    "softwareVersion": "1.1.0",
+    "fileSize": 64804,
+    "installUrl": "bazaar://details?id=com.MedianGames.LootiWar",
+    "screenshot": "https://s.cafebazaar.ir/1/https://s.cafebazaar.ir/images/upload/screenshot/com.MedianGames.LootiWar-578050910625.jpg",
+    "dateModified": "2026-10-20T12:30:00.000Z",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.6,
+      "ratingCount": 423,
+      "worstRating": 0,
+      "bestRating": 5
+    },
+    "applicationCategory": "GameApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": 0,
+      "priceCurrency": "IRR"
+    },
+    "softwareRequirements": "",
+    "potentialAction": {
+      "@type": "ViewAction",
+      "name": "Install from Bazaar",
+      "target": [
+        "https://cafebazaar.ir/app/com.MedianGames.LootiWar",
+        "android-app://com.farsitel.bazaar/bazaar/details?id=com.MedianGames.LootiWar"
+      ]
+    },
+    "video": {
+      "@type": "VideoObject",
+      "name": "لوتی وار",
+      "description": "مبارزه و هیجان در یه فیلم فارسی در نقش هنرپیشه اکشن ولی لوتی",
+      "contentUrl": "https://ads.cdn.asset.aparat.com/cb/e644cced3f063cee91bc694c079b648f23593091-720p.mp4",
+      "thumbnailUrl": "https://s.cafebazaar.ir/aparat/avt/23593091-4970-b__8807.jpg",
+      "uploadDate": "2019-01-15T20:30:00.000Z"
+    }
+  },
+  "notes": [
+    "First release date is unknown; dateModified is a listing update only.",
+    "Driving is described as planned, not included as a current feature."
+  ]
+}

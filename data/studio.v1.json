@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T00:00:00Z",
+  "updatedAt": "2026-10-20T00:00:00Z",
   "company": {
     "id": "median-games",
     "name": {
@@ -87,34 +87,63 @@
       }
     },
     {
-      "id": "puzzle",
-      "image": "https://amirmrezaee.github.io/median-games-website/assets/puzzle.webp",
+      "id": "looti-war",
+      "image": "https://amirmrezaee.github.io/median-games-website/assets/looti-war/icon.png",
+      "imageFit": "contain",
       "title": {
-        "fa": "بازی دوم",
-        "en": "Game Two"
+        "fa": "لوتی وار",
+        "en": "Looti War"
       },
       "summary": {
-        "fa": "کمی فکر، کمی رنگ، کلی سرگرمی.",
-        "en": "A little thought. A little color. A lot of fun."
+        "fa": "هنرپیشهٔ اکشن یک فیلم فارسی باش!",
+        "en": "Step into a classic Iranian action movie."
       },
       "description": {
-        "fa": "طرح نمایشی یک بازی معمایی رنگارنگ. اطلاعات و لینک رسمی این بازی پس از معرفی اضافه می‌شود.",
-        "en": "An illustrative colorful puzzle game. Official details and links will be added when the game is announced."
+        "fa": "در لوتی وار نقش یک هنرپیشهٔ فیلم فارسی را بازی می‌کنی؛ با ضربه‌های حساب‌شده و دفاع به‌موقع، حریف‌ها را شکست بده. ضربه به سر و شکم، دفاع بالا و پایین و حرکت‌های ویژه، مبارزه را به چالش زمان‌بندی و حوصله تبدیل می‌کنند. فن‌های تازه یاد بگیر و با پیشرفت در بازی، قوی‌تر شو.",
+        "en": "Looti War is a Persian fighting game inspired by classic Iranian action cinema. Play an action-film actor and defeat opponents with well-timed strikes and blocks. Head and body attacks, high and low defense, and special moves reward patience and timing. Learn new fighting techniques and grow stronger as you progress."
       },
       "status": {
-        "fa": "نمونهٔ نمایشی",
-        "en": "Concept preview"
+        "fa": "منتشرشده · اندروید",
+        "en": "Released · Android"
       },
-      "links": [],
+      "features": {
+        "fa": [
+          "مبارزه با حال‌وهوای فیلم فارسی",
+          "ضربه به سر و شکم و دفاع بالا و پایین",
+          "چهار حرکت ویژه برای مبارزه",
+          "یادگیری فن‌های تازه و پیشرفت بازیکن"
+        ],
+        "en": [
+          "Fights inspired by classic Iranian cinema",
+          "Head/body strikes and high/low blocks",
+          "Four special fighting moves",
+          "New techniques and player progression"
+        ]
+      },
+      "screenshots": [
+        "https://amirmrezaee.github.io/median-games-website/assets/looti-war/screenshot-1.jpg",
+        "https://amirmrezaee.github.io/median-games-website/assets/looti-war/screenshot-2.jpg"
+      ],
+      "links": [
+        {
+          "label": {
+            "fa": "دریافت از بازار",
+            "en": "Get it on Bazaar"
+          },
+          "url": "https://cafebazaar.ir/app/com.MedianGames.LootiWar"
+        }
+      ],
       "enabled": true,
-      "releaseStatus": "concept",
-      "bundleIds": [],
+      "releaseStatus": "released",
+      "bundleIds": [
+        "com.MedianGames.LootiWar"
+      ],
       "releasedAt": "",
-      "updatedAt": "",
-      "storeUrl": "",
+      "updatedAt": "2026-10-20T12:30:00Z",
+      "storeUrl": "https://cafebazaar.ir/app/com.MedianGames.LootiWar",
       "showOnWebsite": true,
-      "showInApps": false,
-      "showOnLinks": false,
+      "showInApps": true,
+      "showOnLinks": true,
       "promotion": {
         "enabled": false,
         "priority": 0,
@@ -123,8 +152,7 @@
         "website": true,
         "apps": true,
         "links": true
-      },
-      "screenshots": []
+      }
     },
     {
       "id": "racing",

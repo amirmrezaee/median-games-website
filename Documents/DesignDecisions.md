@@ -1,5 +1,14 @@
 # Website design decisions
 
+## Looti War catalogue entry — 2026-10-20
+- User supplied the official Bazaar URL for the studio's new game; continued the established workflow of adding released games to the website.
+- Added `looti-war` / «لوتی وار» with the exact bundle ID `com.MedianGames.LootiWar` to canonical `data/studio.v1.json`, replacing the puzzle concept card. Fenjoon and the remaining concept are preserved.
+- Official icon and two screenshots are stored locally; source URLs and listing metadata are recorded in `LootiWarSources.json`.
+- Persian and English copy describe fighting, timed defense and special moves. Driving is not advertised as available because the listing describes it as a future feature.
+- First release date remains unknown; the listing's latest modification is recorded separately. No rating/install counts are used in marketing copy.
+- Released-game flags enable the existing website, app recommendation and link-hub surfaces. This task does not modify Unity packages or installed game builds.
+- Work is based on current `main`; the separate logo proposal branch and untracked `Arts/` are preserved.
+
 ## Shared catalogue — 2026-10-15
 - User selected this repository as the common source for website games, in-app About/cross-promotion and a future social link hub.
 - Canonical versioned JSON and public brand assets are published by the existing GitHub Pages workflow. Generated games.js preserves the current website rendering path.

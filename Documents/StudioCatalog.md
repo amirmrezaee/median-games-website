@@ -33,6 +33,8 @@ No social account URLs were confirmed. `socialLinks` remains empty; names/handle
 This delivery changes the website's data source and adds the service package. It does not build the future links page or a Unity About view. UI System receives a typed AboutPageData model; artwork rendering/theme/interaction remains its responsibility.
 
 ## Verification receipt — 2026-10-15
+
+Update 2026-10-20: Added Looti War with exact bundle ID `com.MedianGames.LootiWar`. Both released games participate in catalogue recommendations; each app excludes its own exact bundle ID. `releasedAt` remains empty when not independently verified. See `LootiWarSources.json` for official listing assets and metadata.
 - Validated canonical JSON, generated browser adapter equality, current/unknown game filtering, concepts, promotion expiry/surface/order, duplicate ids and HTTPS rejection; packaged JSON equals source.
 - Chromium checked Persian/English, persistent language, dialog/close, local asset/brand loading, empty social-group hiding and horizontal overflow at320/390/768/1024/1440.
 - Current reduced-motion screenshots and source hashes: Screenshots/2026-10-15-catalog-v1. Reduced motion is used for stable complete captures; this is not a new animation implementation or Unity UI screenshot.
