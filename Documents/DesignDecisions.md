@@ -72,3 +72,7 @@ Date: 2026-10-13
 - Used official Bazaar icon and two screenshots; provenance in FreeKickKingSources.json. Store update date is separate from unknown first release.
 - Instagram is enabled for website/apps/link hub using HTTPS. Looti War details offer both stores; canonical app storeUrl remains Bazaar for the currently scoped Bazaar About implementation. No claim of automatic Myket-build routing.
 - This completes the missing-content items recorded earlier today.
+
+## Browser verification — 2026-10-23
+- Built source passed catalogue checks and real Edge/Playwright verification: three cards, approved logo loaded, confirmed Instagram visible with exact destination, Persian/English, dialog open/close, and no horizontal overflow at320/390/768/1024/1440 pixels.
+- Captures and machine-readable checks: Documents/Screenshots/2026-10-23-three-games/. Live JSON was separately checked after deployment: three releases, correct Instagram, company logo HTTP200.
