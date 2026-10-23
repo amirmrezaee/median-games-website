@@ -60,3 +60,9 @@ Date: 2026-10-13
 - Added direct Bazaar links to the game card and detail dialog, bilingual descriptions, feature list, screenshot gallery and shareable `?lang=fa&game=fenjoon` link.
 - English copy explicitly identifies the game as Persian-language; no English gameplay availability is implied.
 - Instagram work is creation of artwork and caption, not publication to an Instagram account.
+
+## Approved Folded Worlds rollout — 2026-10-23
+- WorkRules v37 rule29 records the user's 2026-10-16 approval of Folded Worlds. This approval supersedes the proposal's historical awaiting-approval status for the selected direction.
+- Published a standalone transparent raster derivative as `assets/brand/median-games-folded-worlds-v1.png`; header and canonical company.logoUrl use it. The approved board is published separately as identityBoardUrl and is not used as an app icon.
+- Source: `E:/Works/General/WorkRules/BrandAssets/MedianGames/approved-logo-reference.png`. Built-in image editing extracted the colored M, preserving the folded violet/amber direction. This is a raster derivative, not a vector master. Earlier original brand assets and the separate proposal branch are preserved.
+- Retest found two released games (Fenjoon, Looti War) and one concept. Third released-game metadata and the official Instagram URL remain awaiting user input; no fictional release/account was added.

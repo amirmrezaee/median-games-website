@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T00:00:00Z",
+  "updatedAt": "2026-10-23T05:01:38Z",
   "company": {
     "id": "median-games",
     "name": {
@@ -12,9 +12,9 @@
       "en": "Independent games, made with a love of play."
     },
     "websiteUrl": "https://amirmrezaee.github.io/median-games-website/",
-    "logoUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-logo.png",
+    "logoUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-folded-worlds-v1.png",
     "wordmarkUrl": "",
-    "identityBoardUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-identity.png",
+    "identityBoardUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-folded-worlds-reference.png",
     "socialLinks": []
   },
   "games": [
