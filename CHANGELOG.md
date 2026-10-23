@@ -13,3 +13,7 @@
 - Added Free Kick King with its real Bazaar identity and assets; replaced the last concept.
 - Added confirmed Median Games Instagram and Looti War Myket detail link.
 - Verified catalogue has three releases, two recommendations per recognized current game, and correct social/store destinations.
+
+## 2026-10-23 — Store-scoped catalogue
+- Added explicit Bazaar/Myket links and store-aware app filtering with no cross-store fallback.
+- Verified Myket offers only Looti War and omits it when it is the current game; Bazaar offers the other two releases.

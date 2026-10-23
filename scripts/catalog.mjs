@@ -17,6 +17,13 @@ export function validateCatalog(catalog) {
     if (!isHttps(game.image) || (game.storeUrl && !isHttps(game.storeUrl))) throw Error(`Invalid game URL: ${game.id}`);
     for (const link of game.links) if (!isHttps(link.url)) throw Error(`Invalid store link: ${game.id}`);
     for (const url of game.screenshots || []) if (!isHttps(url)) throw Error(`Invalid screenshot: ${game.id}`);
+    if (game.storeLinks != null) {
+      const stores = new Set();
+      for (const link of game.storeLinks) {
+        if (!['bazaar','myket'].includes(link.store) || stores.has(link.store) || storeUrlFor({storeLinks:[link]},link.store)!==link.url || !link.url) throw Error('Invalid/duplicate store link');
+        stores.add(link.store);
+      }
+    }
     const promo = game.promotion;
     if (!promo || !Number.isInteger(promo.priority) || [game.releasedAt, game.updatedAt, promo.startsAt, promo.endsAt].some(value => !date(value))) throw Error(`Invalid date/promotion: ${game.id}`);
     if (promo.startsAt && promo.endsAt && promo.startsAt >= promo.endsAt) throw Error(`Invalid promotion window: ${game.id}`);
@@ -28,14 +35,20 @@ export function validateCatalog(catalog) {
   for (const link of company.socialLinks) if (!link.id || !isHttps(link.url)) throw Error('Invalid social link');
   return catalog;
 }
+export function storeUrlFor(game, store = 'bazaar') {
+  if (!['bazaar','myket'].includes(store)) throw Error('Unknown store');
+  const url = game.storeLinks?.find(l=>l.store===store)?.url ?? (game.storeLinks == null && store==='bazaar' ? game.storeUrl : '');
+  try { const u=new URL(url); return u.protocol==='https:' && !u.username && !u.password && u.hostname===(store==='myket'?'myket.ir':'cafebazaar.ir') && u.pathname.startsWith('/app/') ? url : ''; } catch { return ''; }
+}
 export function isPromoted(game, surface, now = new Date()) {
   const p = game.promotion;
   return !!(p?.enabled && p[surface] && (!p.startsAt || Date.parse(p.startsAt) <= +now) && (!p.endsAt || +now < Date.parse(p.endsAt)));
 }
-export function selectGames(catalog, surface, currentBundleId = '', now = new Date()) {
+export function selectGames(catalog, surface, currentBundleId = '', now = new Date(), store = 'bazaar') {
+  if (!['bazaar','myket'].includes(store)) throw Error('Unknown store');
   const field = {website:'showOnWebsite',apps:'showInApps',links:'showOnLinks'}[surface];
   if (!field) throw Error('Unknown catalogue surface');
-  return catalog.games.filter(g => g.enabled && g[field] && (surface === 'website' || g.releaseStatus === 'released' && g.storeUrl) && (!currentBundleId || !g.bundleIds.includes(currentBundleId)))
+  return catalog.games.filter(g => g.enabled && g[field] && (surface === 'website' || g.releaseStatus === 'released' && storeUrlFor(g,store)) && (!currentBundleId || !g.bundleIds.includes(currentBundleId)))
     .sort((a,b) => Number(isPromoted(b,surface,now))-Number(isPromoted(a,surface,now)) || (isPromoted(a,surface,now) ? b.promotion.priority-a.promotion.priority : 0) || (Date.parse(b.releasedAt)||0)-(Date.parse(a.releasedAt)||0) || a.id.localeCompare(b.id, 'en'));
 }
 export async function loadCatalog() { return validateCatalog(JSON.parse(await readFile(new URL('../data/studio.v1.json', import.meta.url), 'utf8'))); }

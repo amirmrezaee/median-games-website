@@ -1,13 +1,13 @@
 import { mkdir, copyFile, cp, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { loadCatalog, selectGames, isPromoted } from './catalog.mjs';
+import { loadCatalog, selectGames, isPromoted, storeUrlFor } from './catalog.mjs';
 import { writeFile } from 'node:fs/promises';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.resolve(root, 'dist');
 const catalog = await loadCatalog();
 // Generated compatibility adapter preserves synchronous browser rendering.
-await writeFile(path.join(root, 'games.js'), '// Generated from data/studio.v1.json and scripts/catalog.mjs. Do not edit.\nwindow.MEDIAN_STUDIO = ' + JSON.stringify(catalog) + ';\nwindow.MEDIAN_GAMES = window.MEDIAN_STUDIO.games;\n' + isPromoted.toString() + '\nwindow.MEDIAN_SELECT_GAMES = ' + selectGames.toString() + ';\n');
+await writeFile(path.join(root, 'games.js'), '// Generated from data/studio.v1.json and scripts/catalog.mjs. Do not edit.\nwindow.MEDIAN_STUDIO = ' + JSON.stringify(catalog) + ';\nwindow.MEDIAN_GAMES = window.MEDIAN_STUDIO.games;\n' + storeUrlFor.toString() + '\n' + isPromoted.toString() + '\nwindow.MEDIAN_SELECT_GAMES = ' + selectGames.toString() + ';\n');
 if (output !== path.join(root, 'dist')) throw new Error('Invalid output path');
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });

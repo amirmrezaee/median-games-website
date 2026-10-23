@@ -76,3 +76,9 @@ Date: 2026-10-13
 ## Browser verification — 2026-10-23
 - Built source passed catalogue checks and real Edge/Playwright verification: three cards, approved logo loaded, confirmed Instagram visible with exact destination, Persian/English, dialog open/close, and no horizontal overflow at320/390/768/1024/1440 pixels.
 - Captures and machine-readable checks: Documents/Screenshots/2026-10-23-three-games/. Live JSON was separately checked after deployment: three releases, correct Instagram, company logo HTTP200.
+
+## Explicit per-store visibility — 2026-10-23
+- User requires the game to declare its distribution store: Myket builds display only Myket destinations and Bazaar builds only Bazaar destinations. A game without that store's link is omitted; there is no cross-store fallback.
+- Added canonical per-game storeLinks with explicit bazaar/myket keys. Current confirmed coverage: Bazaar has all three releases; Myket has Looti War only. Website details continue offering every available store.
+- Shared selector accepts explicit store for app/link surfaces. Legacy single-store snapshots can resolve their Bazaar URL only. Duplicate store entries, wrong marketplace domains and unknown stores are rejected.
+- Unity catalogue/UI consume the same store declaration supplied by the host's existing build/purchase settings; this does not create another persisted store selector.

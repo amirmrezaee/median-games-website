@@ -31,3 +31,9 @@ const invalid=structuredClone(catalog); invalid.games[0].storeUrl='javascript:al
 assert.throws(()=>validateCatalog(invalid),/URL/);
 assert.equal((await readFile(new URL('../dist/data/studio.v1.json',import.meta.url),'utf8')),await readFile(new URL('../data/studio.v1.json',import.meta.url),'utf8'));
 console.log('Catalogue checks passed: generated data, publication, current/unknown game, concept filtering, promotion expiry/order, duplicates, HTTPS.');
+
+// Store scope: no link means no recommendation; never fall back to the other marketplace.
+assert.deepEqual(selectGames(catalog,'apps','com.mediangames.fenjoon',new Date(),'myket').map(g=>g.id),['looti-war']);
+assert.deepEqual(selectGames(catalog,'apps','com.MedianGames.LootiWar',new Date(),'myket').map(g=>g.id),[]);
+const badStore=structuredClone(catalog); badStore.games[0].storeLinks=[{store:'myket',url:badStore.games[0].storeUrl}];
+assert.throws(()=>validateCatalog(badStore),/store link/);
