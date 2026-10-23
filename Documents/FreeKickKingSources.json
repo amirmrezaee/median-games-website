@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-23",
+  "page": "https://cafebazaar.ir/app/com.Mediangames.king",
+  "bundleId": "com.Mediangames.king",
+  "listingName": "سلطان ضربه کاشته",
+  "listingDateModified": "2020-11-16T12:30:00Z",
+  "firstReleaseDate": null,
+  "assets": {
+    "icon.png": "https://s.cafebazaar.ir/images/icons/com.Mediangames.king-8c1795ce-a66f-4a29-aba9-9ffd8db10cab_128x128.png",
+    "screenshot-1.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.Mediangames.king-929783743364.jpg",
+    "screenshot-2.jpg": "https://s.cafebazaar.ir/images/upload/screenshot/com.Mediangames.king-589992132465.jpg"
+  },
+  "notes": [
+    "Store URL, studio membership and Instagram handle supplied by user. Listing metadata read directly from Bazaar HTML/SoftwareApplication JSON-LD.",
+    "No first-release date invented; dateModified is the store update only. English title is descriptive translation."
+  ]
+}

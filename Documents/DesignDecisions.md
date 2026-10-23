@@ -66,3 +66,9 @@ Date: 2026-10-13
 - Published a standalone transparent raster derivative as `assets/brand/median-games-folded-worlds-v1.png`; header and canonical company.logoUrl use it. The approved board is published separately as identityBoardUrl and is not used as an app icon.
 - Source: `E:/Works/General/WorkRules/BrandAssets/MedianGames/approved-logo-reference.png`. Built-in image editing extracted the colored M, preserving the folded violet/amber direction. This is a raster derivative, not a vector master. Earlier original brand assets and the separate proposal branch are preserved.
 - Retest found two released games (Fenjoon, Looti War) and one concept. Third released-game metadata and the official Instagram URL remain awaiting user input; no fictional release/account was added.
+
+## Three released games and official socials — 2026-10-23
+- User supplied Bazaar listing `com.Mediangames.king`, Instagram `mediangame`, and Looti War's Myket listing. Added the real Free Kick King / سلطان ضربه کاشته entry in place of the remaining concept; catalogue now contains exactly three released games.
+- Used official Bazaar icon and two screenshots; provenance in FreeKickKingSources.json. Store update date is separate from unknown first release.
+- Instagram is enabled for website/apps/link hub using HTTPS. Looti War details offer both stores; canonical app storeUrl remains Bazaar for the currently scoped Bazaar About implementation. No claim of automatic Myket-build routing.
+- This completes the missing-content items recorded earlier today.

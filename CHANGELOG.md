@@ -8,3 +8,8 @@
 ## 2026-10-23 — Approved studio logo
 - Shared catalogue and website header now use the approved Folded Worlds raster logo.
 - Live catalogue audit: two published games plus one concept; third game's listing and Instagram account need confirmed input.
+
+## 2026-10-23 — Three released games and Instagram
+- Added Free Kick King with its real Bazaar identity and assets; replaced the last concept.
+- Added confirmed Median Games Instagram and Looti War Myket detail link.
+- Verified catalogue has three releases, two recommendations per recognized current game, and correct social/store destinations.

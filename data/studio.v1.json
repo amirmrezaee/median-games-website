@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T05:01:38Z",
+  "updatedAt": "2026-10-23T05:05:01Z",
   "company": {
     "id": "median-games",
     "name": {
@@ -15,7 +15,21 @@
     "logoUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-folded-worlds-v1.png",
     "wordmarkUrl": "",
     "identityBoardUrl": "https://amirmrezaee.github.io/median-games-website/assets/brand/median-games-folded-worlds-reference.png",
-    "socialLinks": []
+    "socialLinks": [
+      {
+        "id": "instagram",
+        "label": {
+          "fa": "اینستاگرام مدین گیمز",
+          "en": "Median Games Instagram"
+        },
+        "url": "https://www.instagram.com/mediangame/",
+        "iconUrl": "",
+        "enabled": true,
+        "website": true,
+        "apps": true,
+        "links": true
+      }
+    ]
   },
   "games": [
     {
@@ -131,6 +145,13 @@
             "en": "Get it on Bazaar"
           },
           "url": "https://cafebazaar.ir/app/com.MedianGames.LootiWar"
+        },
+        {
+          "label": {
+            "fa": "دریافت از مایکت",
+            "en": "Get it on Myket"
+          },
+          "url": "https://myket.ir/app/com.MedianGames.LootiWar"
         }
       ],
       "enabled": true,
@@ -155,34 +176,61 @@
       }
     },
     {
-      "id": "racing",
-      "image": "https://amirmrezaee.github.io/median-games-website/assets/racing.webp",
+      "id": "free-kick-king",
+      "image": "https://amirmrezaee.github.io/median-games-website/assets/free-kick-king/icon.png",
+      "imageFit": "contain",
       "title": {
-        "fa": "بازی سوم",
-        "en": "Game Three"
+        "fa": "سلطان ضربه کاشته",
+        "en": "Free Kick King"
       },
       "summary": {
-        "fa": "به سمت یک ماجراجویی پرسرعت!",
-        "en": "Take the scenic route to a new adventure!"
+        "fa": "ضربه‌های فوتبال را تمرین کن و سلطان زمین شو.",
+        "en": "Train your football skills and rule the pitch."
       },
       "description": {
-        "fa": "طرح نمایشی یک مسابقهٔ شاد و پرسرعت. تصاویر کنونی صرفاً برای نمایش ظاهر سایت هستند.",
-        "en": "An illustrative playful racing game. The current artwork demonstrates the website design."
+        "fa": "سلطان ضربه کاشته یک بازی فوتبالی با ضربهٔ کاشتهٔ غیرمستقیم، دریبل، شوت، ضربهٔ سر و والی است. مهارت‌های فوتبالی را تمرین کن و با تمرین‌های کششی و قدرتی آمادهٔ رقابت شو.",
+        "en": "Free Kick King combines indirect free kicks, dribbling, shooting, headers and volleys. Practice football skills alongside stretching and strength exercises."
       },
       "status": {
-        "fa": "نمونهٔ نمایشی",
-        "en": "Concept preview"
+        "fa": "منتشرشده · اندروید",
+        "en": "Released · Android"
       },
-      "links": [],
+      "features": {
+        "fa": [
+          "ضربهٔ کاشتهٔ غیرمستقیم",
+          "دریبل، شوت، ضربهٔ سر و والی",
+          "تمرین‌های کششی و قدرتی"
+        ],
+        "en": [
+          "Indirect free kicks",
+          "Dribbling, shots, headers and volleys",
+          "Stretching and strength exercises"
+        ]
+      },
+      "screenshots": [
+        "https://amirmrezaee.github.io/median-games-website/assets/free-kick-king/screenshot-1.jpg",
+        "https://amirmrezaee.github.io/median-games-website/assets/free-kick-king/screenshot-2.jpg"
+      ],
+      "links": [
+        {
+          "label": {
+            "fa": "دریافت از بازار",
+            "en": "Get it on Bazaar"
+          },
+          "url": "https://cafebazaar.ir/app/com.Mediangames.king"
+        }
+      ],
       "enabled": true,
-      "releaseStatus": "concept",
-      "bundleIds": [],
+      "releaseStatus": "released",
+      "bundleIds": [
+        "com.Mediangames.king"
+      ],
       "releasedAt": "",
-      "updatedAt": "",
-      "storeUrl": "",
+      "updatedAt": "2020-11-16T12:30:00Z",
+      "storeUrl": "https://cafebazaar.ir/app/com.Mediangames.king",
       "showOnWebsite": true,
-      "showInApps": false,
-      "showOnLinks": false,
+      "showInApps": true,
+      "showOnLinks": true,
       "promotion": {
         "enabled": false,
         "priority": 0,
@@ -191,8 +239,7 @@
         "website": true,
         "apps": true,
         "links": true
-      },
-      "screenshots": []
+      }
     }
   ]
 }
