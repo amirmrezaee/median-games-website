@@ -1,0 +1,74 @@
+{
+  "testedAt": "2026-10-23T05:15:34.732Z",
+  "siteUrl": "http://127.0.0.1:4173/",
+  "source": {
+    "index.html": "30d33786e7d8aa7ccdff75a7abefdcea30dcbc25ce3718db099d3d95ea39f9d0",
+    "styles.css": "6039495e9ff0e68836f90ce9a17a04be8c2a72aca98aab4026e52350649ca65e",
+    "app.js": "325d6356fb1e66d709425fe6d0d9d208c8a54e46c46e3c3c69d0d2180574beed",
+    "games.js": "7a755e1d1215fcb8c7ed05bf9849c8ab1af95f1a0f3372ceca0b82f5f04bf754",
+    "assets/hero.webp": "2492d61803b74c748bfaddce5cf6b6341767f14b568634f49443297a6e6ad99d",
+    "assets/puzzle.webp": "e1a92d2bfb36731e64da83d7fcc716764eb4d95e0109b95652f783e65f7a1b6d",
+    "assets/racing.webp": "9332d9a6cc36e04eb3a4346e5659711d918b44c6c667bd578ea62904ce9530c5"
+  },
+  "checks": [
+    "Local assets loaded",
+    "No browser errors",
+    "Persian RTL",
+    "English LTR",
+    "Language persists after reload",
+    "Game dialog opens and closes with Escape",
+    "No horizontal overflow at five widths in both languages"
+  ],
+  "layouts": [
+    {
+      "lang": "fa",
+      "viewport": 320,
+      "content": 320
+    },
+    {
+      "lang": "fa",
+      "viewport": 390,
+      "content": 390
+    },
+    {
+      "lang": "fa",
+      "viewport": 768,
+      "content": 768
+    },
+    {
+      "lang": "fa",
+      "viewport": 1024,
+      "content": 1024
+    },
+    {
+      "lang": "fa",
+      "viewport": 1440,
+      "content": 1440
+    },
+    {
+      "lang": "en",
+      "viewport": 320,
+      "content": 320
+    },
+    {
+      "lang": "en",
+      "viewport": 390,
+      "content": 390
+    },
+    {
+      "lang": "en",
+      "viewport": 768,
+      "content": 768
+    },
+    {
+      "lang": "en",
+      "viewport": 1024,
+      "content": 1024
+    },
+    {
+      "lang": "en",
+      "viewport": 1440,
+      "content": 1440
+    }
+  ]
+}

@@ -82,3 +82,5 @@ Date: 2026-10-13
 - Added canonical per-game storeLinks with explicit bazaar/myket keys. Current confirmed coverage: Bazaar has all three releases; Myket has Looti War only. Website details continue offering every available store.
 - Shared selector accepts explicit store for app/link surfaces. Legacy single-store snapshots can resolve their Bazaar URL only. Duplicate store entries, wrong marketplace domains and unknown stores are rejected.
 - Unity catalogue/UI consume the same store declaration supplied by the host's existing build/purchase settings; this does not create another persisted store selector.
+
+Store-scope source also passed the browser suite after regenerating games.js; current captures are Documents/Screenshots/2026-10-23-store-scope/. Website remains three cards with Instagram and approved logo; app store filtering is checked separately in verify-catalog.mjs and the Unity sample.
