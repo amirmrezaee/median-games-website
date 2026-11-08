@@ -1,5 +1,10 @@
 # Website design decisions
 
+## North Star brand reference — 2026-11-08
+- Amir supplied the North Star brand board for registration in the project documentation. The board records the keyhole and four-point star mark, bilingual slogan, logo variants, palette and application examples.
+- The project keeps the original PNG and a Persian summary in [North Star brand reference](Brand/2026-11-08/README.md). The existing Folded Worlds rollout remains the recorded production decision.
+
+
 ## Looti War catalogue entry — 2026-10-20
 - User supplied the official Bazaar URL for the studio's new game; continued the established workflow of adding released games to the website.
 - Added `looti-war` / «لوتی وار» with the exact bundle ID `com.MedianGames.LootiWar` to canonical `data/studio.v1.json`, replacing the puzzle concept card. Fenjoon and the remaining concept are preserved.
