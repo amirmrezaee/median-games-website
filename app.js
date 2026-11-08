@@ -72,7 +72,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 function renderCompany() {
   const company = window.MEDIAN_STUDIO.company;
   const logo = document.querySelector('#studio-logo');
-  logo.src = catalogAsset(company.logoUrl); logo.alt = localized(company.name);
+  logo.alt = localized(company.name);
   const links = document.querySelector('#studio-social-links'); links.replaceChildren();
   for (const link of company.socialLinks.filter(l => l.enabled && l.website)) {
     const anchor = makeElement('a', 'game-link', localized(link.label));
