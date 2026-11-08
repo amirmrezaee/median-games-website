@@ -77,6 +77,13 @@
             "en": "Get it on Bazaar"
           },
           "url": "https://cafebazaar.ir/app/com.mediangames.fenjoon"
+        },
+        {
+          "label": {
+            "fa": "دریافت از مایکت",
+            "en": "Get it on Myket"
+          },
+          "url": "https://myket.ir/app/com.mediangames.fenjoon"
         }
       ],
       "enabled": true,
@@ -103,6 +110,10 @@
         {
           "store": "bazaar",
           "url": "https://cafebazaar.ir/app/com.mediangames.fenjoon"
+        },
+        {
+          "store": "myket",
+          "url": "https://myket.ir/app/com.mediangames.fenjoon"
         }
       ]
     },

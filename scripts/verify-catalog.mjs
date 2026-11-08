@@ -34,6 +34,7 @@ console.log('Catalogue checks passed: generated data, publication, current/unkno
 
 // Store scope: no link means no recommendation; never fall back to the other marketplace.
 assert.deepEqual(selectGames(catalog,'apps','com.mediangames.fenjoon',new Date(),'myket').map(g=>g.id),['looti-war']);
-assert.deepEqual(selectGames(catalog,'apps','com.MedianGames.LootiWar',new Date(),'myket').map(g=>g.id),[]);
+assert.deepEqual(selectGames(catalog,'apps','com.MedianGames.LootiWar',new Date(),'myket').map(g=>g.id),['fenjoon']);
+assert.equal(catalog.games.find(g=>g.id==='fenjoon').storeLinks.find(l=>l.store==='myket').url,'https://myket.ir/app/com.mediangames.fenjoon');
 const badStore=structuredClone(catalog); badStore.games[0].storeLinks=[{store:'myket',url:badStore.games[0].storeUrl}];
 assert.throws(()=>validateCatalog(badStore),/store link/);

@@ -8,6 +8,21 @@ let language = 'fa';
 const localized = value => typeof value === 'string' ? value : value?.[language] || value?.en || '';
 const catalogAsset = value => value?.startsWith(window.MEDIAN_STUDIO.company.websiteUrl) ? value.slice(window.MEDIAN_STUDIO.company.websiteUrl.length) : value;
 function makeElement(tag, className, text) { const element = document.createElement(tag); if (className) element.className = className; if (text) element.textContent = text; return element; }
+function appendGameLinks(container, links, className) {
+  for (const link of links) {
+    let url;
+    try { url = new URL(link.url); } catch { continue; }
+    if (url.protocol !== 'https:') continue;
+    const anchor = makeElement('a', className, localized(link.label));
+    anchor.href = url.href;
+    anchor.target = '_blank';
+    anchor.rel = 'noopener noreferrer';
+    anchor.dir = 'auto';
+    if (url.hostname === 'cafebazaar.ir') anchor.dataset.store = 'bazaar';
+    if (url.hostname === 'myket.ir') anchor.dataset.store = 'myket';
+    container.append(anchor);
+  }
+}
 function renderGames() {
   const grid = document.querySelector('#game-grid'); grid.replaceChildren();
   const games = window.MEDIAN_SELECT_GAMES(window.MEDIAN_STUDIO, 'website');
@@ -20,16 +35,7 @@ function renderGames() {
     info.append(makeElement('h3', 'game-title', localized(game.title)), makeElement('span', 'status', localized(game.status)), makeElement('p', 'game-summary', localized(game.summary)));
     const button = makeElement('button', 'game-link'); button.type = 'button'; button.append(makeElement('span', '', copy[language].viewGame), makeElement('span', 'arrow', '←')); button.lastElementChild.setAttribute('aria-hidden', 'true'); button.setAttribute('aria-label', `${copy[language].viewGame}: ${localized(game.title)}`); button.addEventListener('click', () => openGame(game));
     const stores = makeElement('div', 'game-store-links');
-    for (const link of game.links) {
-      let url;
-      try { url = new URL(link.url); } catch { continue; }
-      if (url.protocol !== 'https:') continue;
-      const store = makeElement('a', 'game-link store-link', localized(link.label));
-      store.href = url.href;
-      store.target = '_blank';
-      store.rel = 'noopener noreferrer';
-      stores.append(store);
-    }
+    appendGameLinks(stores, game.links, 'game-link store-link');
     if (stores.childElementCount) {
       info.append(stores);
       button.classList.add('details-link');
@@ -52,7 +58,7 @@ function fillDialog(game) {
   gallery.hidden = !gallery.children.length;
   document.querySelector('.dialog-note').hidden = game.links.length > 0;
   const links = document.querySelector('#dialog-links'); links.replaceChildren();
-  for (const link of game.links) { let url; try { url = new URL(link.url); } catch { continue; } if (url.protocol !== 'https:') continue; const anchor = makeElement('a', 'button primary', localized(link.label)); anchor.href = url.href; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; links.append(anchor); }
+  appendGameLinks(links, game.links, 'button primary store-link');
 }
 function openGame(game) { selectedGame = game; fillDialog(game); dialog.showModal(); document.body.classList.add('dialog-open'); }
 document.querySelector('.close-dialog').addEventListener('click', () => dialog.close());

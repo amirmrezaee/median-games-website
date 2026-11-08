@@ -79,8 +79,12 @@ Date: 2026-10-13
 
 ## Explicit per-store visibility — 2026-10-23
 - User requires the game to declare its distribution store: Myket builds display only Myket destinations and Bazaar builds only Bazaar destinations. A game without that store's link is omitted; there is no cross-store fallback.
-- Added canonical per-game storeLinks with explicit bazaar/myket keys. Current confirmed coverage: Bazaar has all three releases; Myket has Looti War only. Website details continue offering every available store.
+- Added canonical per-game storeLinks with explicit bazaar/myket keys. Current confirmed coverage: Bazaar has all three releases; Myket now has Looti War and Fenjoon (updated 2026-11-09). Website details continue offering every available store.
 - Shared selector accepts explicit store for app/link surfaces. Legacy single-store snapshots can resolve their Bazaar URL only. Duplicate store entries, wrong marketplace domains and unknown stores are rejected.
 - Unity catalogue/UI consume the same store declaration supplied by the host's existing build/purchase settings; this does not create another persisted store selector.
 
 Store-scope source also passed the browser suite after regenerating games.js; current captures are Documents/Screenshots/2026-10-23-store-scope/. Website remains three cards with Instagram and approved logo; app store filtering is checked separately in verify-catalog.mjs and the Unity sample.
+
+## Store buttons — 2026-11-09
+
+- Website cards and game details place Bazaar on the physical left in green and Myket on the physical right in blue in both languages. Each store keeps its side when it is the only option.
