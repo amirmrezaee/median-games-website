@@ -87,4 +87,4 @@ Store-scope source also passed the browser suite after regenerating games.js; cu
 
 ## Store buttons — 2026-11-09
 
-- Website cards and game details place Bazaar on the physical left in green and Myket on the physical right in blue in both languages. Each store keeps its side when it is the only option.
+- Website cards and game details place Bazaar on the physical left in green (#0EA960) and Myket on the physical right in blue (#3394FF) in both languages. Each store keeps its side when it is the only option.

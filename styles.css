@@ -38,12 +38,12 @@ html[lang=en] .hero h1{font-family:Arial,sans-serif;font-size:clamp(36px,3.7vw,5
 .store-link:not([data-store]) { grid-column: 1 / -1; }
 .store-link[data-store="bazaar"], .store-link[data-store="bazaar"]:hover {
   grid-column: 1;
-  background: #14734a;
+  background: #0ea960;
   color: white;
 }
 .store-link[data-store="myket"], .store-link[data-store="myket"]:hover {
   grid-column: 2;
-  background: #1858b7;
+  background: #3394ff;
   color: white;
 }
-.store-link[data-store]:hover { filter: brightness(.92); }
+.store-link[data-store]:hover { filter: none; }
